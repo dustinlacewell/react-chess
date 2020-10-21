@@ -10,7 +10,7 @@ export default function Score({ name, info }) {
         <div className={css.score}>
             <div className={css.captures}>
                 {captures.map((piece, index) => (
-                    <DraggablePiece piece={piece} position={index} />
+                    <DraggablePiece key={index} piece={piece} position={index} />
                 ))}
             </div>
         </div>

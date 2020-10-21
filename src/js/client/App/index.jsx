@@ -1,45 +1,30 @@
 import { hot } from "react-hot-loader";
 import React, { useState, useEffect, useRef } from "react";
-import { DndProvider } from "react-dnd";
-import { HTML5Backend } from "react-dnd-html5-backend";
 
-import GameContext from "@client/GameContext";
-import GameServer from "@client/FayeGameServer";
 import Menu from "@client/Menu";
 import Board from "@client/Board";
-import Score from "@client/Score";
-import PiecePreview from "@client/PiecePreview";
-import { useLocalClient } from "@client/LocalClient"
-import FayeRemoteClient from "@client/FayeRemoteClient"
+import GameContext from "@client/GameContext";
 
-import getAppContext from "./context";
+import useConfig from "./useConfig";
+import useClient from "./useClient";
 
 import css from "./index.module";
 
 
 export default function App(props) {
-    const context = getAppContext();
+    const config = useConfig();
+    const [state, client, status] = useClient(config);
+    const context = {config, state, client, status};
 
-    if (context.state == null) return null;
-
-    const playerNames = Object.keys(context.state.players);
-    const firstTurn = playerNames[0];
-    const firstPlayer = context.state.players[firstTurn];
-    const secondTurn = playerNames[1];
-    const secondPlayer = context.state.players[secondTurn];
+    if (state == null) return null;
 
     return (
         <GameContext.Provider value={context}>
-            <DndProvider backend={HTML5Backend}>
-                <div id={css.app}>
-                    <Score name={firstTurn} info={firstPlayer} />
-                    <Board />
-                    <Menu status={context.status} />
-                    <div id={css.shadow}></div>
-                    <Score name={secondTurn} info={secondPlayer} />
-                </div>
-                <PiecePreview />
-            </DndProvider>
+            <div id={css.app}>
+                <Board />
+                <Menu />
+                <div id={css.shadow}></div>
+            </div>
         </GameContext.Provider>
     );
 }

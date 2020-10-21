@@ -3,6 +3,7 @@
     flex: 1;
     font-size: 56%;
     text-transform: uppercase;
+    background-color: white;
 }
 
 .networkConfig {
@@ -11,7 +12,12 @@
 
     font-size: 4vh;
 
+    & > div:first-child label {
+        width: auto;
+    }
+
     & > div {
+        margin-top: 4vh;
         label {
             display: flex;
             align-items: center;

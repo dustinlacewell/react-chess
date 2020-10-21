@@ -1,4 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
+
+import MenuContext from "@client/Menu/MenuContext";
 
 import css from "./index.module";
 
@@ -12,7 +14,8 @@ function uuidv4() {
     });
 }
 
-export default function NetworkConfig({ setHosting, setGamekey }) {
+export default function NetworkConfig() {
+    const { confirm, setHosting, setGamekey } = useContext(MenuContext);
     const [mode, setMode] = useState("local");
     const [joinkey, setJoinkey] = useState("");
     const [hostkey, setHostkey] = useState("global");
@@ -43,6 +46,12 @@ export default function NetworkConfig({ setHosting, setGamekey }) {
         setGamekey(key);
     };
 
+    const onKeyDown = (e) => {
+        if (e.key == "Enter") {
+            confirm();
+        }
+    };
+
     return (
         <div className={css.networkConfig}>
             <div>
@@ -53,7 +62,7 @@ export default function NetworkConfig({ setHosting, setGamekey }) {
                         checked={mode == "local"}
                         onChange={onLocal}
                     />
-                    Local
+                    Local Hotseat
                 </label>
             </div>
 
@@ -74,6 +83,7 @@ export default function NetworkConfig({ setHosting, setGamekey }) {
                     onChange={onJoinChange}
                     value={mode == "join" ? joinkey : ""}
                     disabled={mode != "join"}
+                    onKeyDown={onKeyDown}
                 />
             </div>
 

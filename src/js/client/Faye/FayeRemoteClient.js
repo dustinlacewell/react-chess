@@ -7,11 +7,7 @@ export default class RemoteClient {
         this.gamekey = gamekey;
         this.update = update;
         this.socket = new faye.Client('http://ldlework.com:8001/');
-        this.socket.subscribe(this.key("state"), (msg) => {
-            console.log("Got state data:")
-            console.log(msg)
-            update(msg);
-        });
+        this.socket.subscribe(this.key("state"), update);
     }
 
     key(name) {
