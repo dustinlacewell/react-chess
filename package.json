@@ -1,0 +1,47 @@
+{
+  "name": "chess-client",
+  "version": "0.1.0",
+  "description": "Frontend for Chess demo",
+  "main": "index.js",
+  "dependencies": {
+    "ably": "^1.2.3",
+    "array-2d": "^1.0.2",
+    "faye": "^1.4.0",
+    "fixed-2d-array": "^2.0.0",
+    "jquery": "^3.5.1",
+    "jquery-ui": "^1.12.1",
+    "react": "^16.14.0",
+    "react-dnd": "^11.1.3",
+    "react-dnd-html5-backend": "^11.1.3",
+    "react-dnd-preview": "^6.0.2",
+    "react-dom": "^16.14.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.0",
+    "@babel/plugin-proposal-export-default-from": "^7.12.1",
+    "@babel/preset-env": "^7.12.0",
+    "@babel/preset-react": "^7.10.4",
+    "babel-loader": "^8.1.0",
+    "css-loader": "^5.0.0",
+    "dynamic-cdn-webpack-plugin": "^5.0.0",
+    "html-webpack-plugin": "^4.5.0",
+    "mini-css-extract-plugin": "^1.0.0",
+    "module-to-cdn": "^3.1.5",
+    "node-sass": "^4.14.1",
+    "prettier": "^2.1.2",
+    "react-hot-loader": "^4.13.0",
+    "sass-loader": "^10.0.3",
+    "style-loader": "^2.0.0",
+    "webpack": "^5.1.0",
+    "webpack-cdn-plugin": "^3.3.1",
+    "webpack-cli": "^4.0.0",
+    "webpack-dev-server": "^3.11.0",
+    "webpack-jquery-ui": "^2.0.1",
+    "webpack-node-externals": "^2.5.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

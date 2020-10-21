@@ -1,0 +1,41 @@
+@import '~@css/colors';
+@import '~@css/mixins';
+
+
+.square {
+    width: calc(10vh - 1px);
+    height: calc(10vh - 1px);
+    margin-bottom: 1px;
+    margin-left: 1px;
+}
+
+$borderSize: 2px;
+$hoverBorderColor: $dark;
+$bgSpeed: 150ms;
+
+.square.white {
+    @include fadingBG($light);
+}
+
+.square.black {
+    @include fadingBG($medium);
+}
+
+.square.white-drop-active {
+    @include fadingBG($light-good);
+}
+
+.square.black-drop-active {
+    @include fadingBG($medium-good);
+}
+
+.square.white-drop-hover {
+    @include pulsingBG($light-good, 50%);
+    border: $borderSize solid $hoverBorderColor;
+}
+
+.square.black-drop-hover {
+    @include pulsingBG($medium-good, 20%);
+    border: $borderSize solid $hoverBorderColor;
+}
+

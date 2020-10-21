@@ -1,0 +1,26 @@
+$light: white;
+$medium: grey;
+$dark: black;
+
+$good: green;
+$bad: red;
+$warn: orange;
+$neutral: yellow;
+
+$mix-amount: 80%;
+
+$light-good: mix($light, $good, $mix-amount);
+$medium-good: mix($medium, $good, $mix-amount);
+$dark-good: mix($dark, $good, $mix-amount);
+
+$light-bad: mix($light, $bad, $mix-amount);
+$medium-bad: mix($medium, $bad, $mix-amount);
+$dark-bad: mix($dark, $bad, $mix-amount);
+
+$light-warn: mix($light, $warn, $mix-amount);
+$medium-warn: mix($medium, $warn, $mix-amount);
+$dark-warn: mix($dark, $warn, $mix-amount);
+
+$light-neutral: mix($light, $neutral, $mix-amount);
+$medium-neutral: mix($medium, $neutral, $mix-amount);
+$dark-neutral: mix($dark, $neutral, $mix-amount);

@@ -1,0 +1,168 @@
+div {
+    display: flex;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    margin: 0px;
+    min-height: 100vh;
+    cursor: pointer;
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none; /* Standard */
+
+    & > div {
+        flex: 1;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+#game {
+    display: flex;
+    flex-direction: row;
+}
+
+#left {
+    position: relative;
+}
+
+#center {
+    display: flex;
+    flex-direction: column;
+}
+
+#board  {
+    display: flex;
+    flex-direction: column;
+}
+
+.row {
+    display: flex;
+}
+
+.place {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 64px;
+    height: 64px;
+    border: 1px solid black;
+}
+
+.surface-a {
+    background: white;
+}
+
+.surface-b {
+    background: grey;
+}
+
+.place p {
+    position: absolute;
+    margin: -48px 0px 0px -48px;
+    padding: 0px;
+    font-size: .5em;
+}
+
+.piece {
+    cursor: pointer;
+    font-size: 3em;
+}
+
+.piece.white {
+    color: white;
+    text-shadow: 0px 0px 10px black;
+}
+
+.piece.black {
+    text-shadow: 0px 0px 5px black;
+}
+
+.ui-droppable-active.surface-a {
+    background: #e9fce8 !important;
+}
+
+.ui-droppable-active.surface-b {
+    background: #889985 !important;
+}
+
+.score {
+    display: flex;
+}
+
+
+#menu {
+    display: flex;
+    margin-top: 2.55em;
+    position: absolute;
+    left: -49px;
+}
+
+#menu:hover {
+    left: inherit;
+}
+
+#menu #reset {
+    width: 48px;
+    height: 48px;
+    border: 1px solid black;
+    border-right: 0px;
+    border-radius: 5px 0px 0px 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#menu #menuRight {
+    width: 40px;
+}
+
+.score span {
+    font-size: 2em;
+    font-family: monospace;
+    text-transform: uppercase;
+    padding: .2em;
+}
+
+// .score:first-child {
+//     z-index: 10
+// }
+
+.score:first-child span {
+    border-radius: 5px 5px 0px 0px;
+    border: 1px solid black;
+    border-bottom: 0px;
+    background: white;
+}
+
+
+.score:last-child {
+    flex-direction: row-reverse;
+}
+
+.score:last-child span {
+    color: white;
+    background: black;
+    padding: .2em;
+    border-radius: 0px 0px 5px 5px;
+}
+
+.score .captures {
+    display: flex;
+    flex-direction: row;
+}
+
+.score .captures .piece {
+    font-size: 2em !important;
+}
+
+.score:first-child .piece {
+    margin-left: .3em;
+}
+
+.score:last-child .piece {
+    margin-right: .3em;
+}

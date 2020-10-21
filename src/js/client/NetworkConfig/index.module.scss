@@ -1,0 +1,26 @@
+.expander {
+    margin-left: 2vh;
+    flex: 1;
+    font-size: 56%;
+    text-transform: uppercase;
+}
+
+.networkConfig {
+    flex-direction: column;
+    width: 80%;
+
+    font-size: 4vh;
+
+    & > div {
+        label {
+            display: flex;
+            align-items: center;
+            width: 15vh;
+
+            input:first-child {
+                margin-right: 2vh;
+                padding-bottom: 1vh;
+            }
+        }
+    }
+}

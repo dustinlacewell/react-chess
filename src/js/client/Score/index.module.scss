@@ -1,0 +1,72 @@
+.score {
+    position: absolute;
+
+    width: calc(10vh * 8 - 1px);
+    min-height: 1em; // resting height
+
+    box-shadow: 0px 0px 15px black;
+    border: 1px solid black;
+
+    span {
+        display: flex;
+    }
+
+    &:first-child {
+        bottom: 80vh;
+
+        background: white;
+        border-radius: 5px 5px 0px 0px;
+
+        span {
+            border-radius: 5px 5px 0px 0px;
+            border: 1px solid black;
+            border-bottom: 0px;
+            color: black;
+            background: white;
+        }
+
+        .captures {
+            padding-right: 1em;
+        }
+    }
+
+    &:last-child {
+        flex-direction: row-reverse;
+
+        top: calc(80vh - 1px);
+
+        background: black;
+        color: white;
+        border-bottom: 0px;
+        border-radius: 0px 0px 5px 5px;
+
+
+        span {
+            border-radius: 0px 0px 5px 5px;
+            color: white;
+            background: black;
+        }
+
+        .captures {
+            flex-direction: row;
+            padding-left: 1em;
+        }
+    }
+
+
+    .captures {
+        flex: 1;
+        flex-direction: row-reverse;
+
+        & > div {
+            flex-wrap: wrap;
+
+            i {
+                padding: 0 .6vh;
+                font-size: 4vh !important;
+                text-shadow: none !important;
+            }
+        }
+    }
+}
+

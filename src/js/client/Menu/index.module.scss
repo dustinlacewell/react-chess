@@ -1,0 +1,140 @@
+@import '~@css/styles';
+@import '~@css/mixins';
+
+$sidebar-width: 8vh;
+
+.menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    justify-content: stretch;
+    align-items: stretch;
+    color: white;
+
+    .menuContainer {
+        position: relative;
+        flex: 1;
+        font-family: Vollkorn;
+    }
+
+    .menuBackground {
+        background-color: black;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        opacity: .8;
+    }
+
+    .menuContent {
+        flex: 1;
+        position: relative;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+
+        .title {
+            @include text-pop();
+        }
+
+        .madewith {
+            flex-direction: column;
+            width: 80%;
+            font-size: 4vh;
+            align-items: flex-end;
+
+            span {
+                @extend .rainbow;
+            }
+
+            i {
+                color: lightgrey;
+                font-size: 2vh;
+            }
+        }
+    }
+
+    &.invisible {
+        .menuContainer {
+            @include pop(2s, 5, -500);
+            transition: opacity .5s;
+            opacity: 0;
+            z-index: -500;
+        }
+
+        .tab {
+            width: 4vh;
+            height: 4vh;
+            transform: rotatez(0deg);
+            transition: .5s;
+        }
+    }
+
+    &.visible {
+        .menuContainer {
+            transition: opacity .5s;
+            opacity: 1;
+            z-index: 5;
+        }
+
+        .tab {
+            transition: .5s;
+            border-radius: 0 !important;
+            background-position: -60px -62px !important;
+            background-size: 100% 100% !important;
+        }
+    }
+
+    .sidebar {
+        position: absolute;
+        width: $sidebar-width;
+        height: 100%;
+        right: -$sidebar-width;
+
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .status {
+            position: absolute;
+            top: 0;
+        }
+
+        .tab {
+            width: 40px;
+            height: 40px;
+
+            background-image: conic-gradient(white 0deg ,white 90deg,
+                                             grey 90deg,grey 180deg,
+                                             white 180deg,white 270deg,
+                                             grey 270deg,grey 360deg);
+            background-position: 0 0;
+            background-size: 25% 25%;
+
+            border-radius: 20px;
+            border: 1px solid black;
+            transition: .5s;
+
+            &:hover {
+                background-position: -60px -61px;
+                background-size: 100% 100%;
+                transition: .5s;
+            }
+        }
+
+        .reset {
+            width: 40px;
+            height: 40px;
+            font-size: 35px;
+
+            &:after {
+                content: "⟲";
+            }
+        }
+    }
+}

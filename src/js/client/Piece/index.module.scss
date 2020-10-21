@@ -1,0 +1,51 @@
+.piece {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+
+    i {
+        display: block;
+        font-size: 10vh;
+        font-style: normal;
+        text-shadow: 0px 0px 10px black;
+    }
+
+    i.white {
+        color: white;
+    }
+
+    i.black {
+        color: black;
+    }
+
+    i.king:after {
+        display: block;
+        content: "♚";
+    }
+
+    i.queen:after {
+        display: block;
+        content: "♛";
+    }
+
+    i.rook:after {
+        display: block;
+        content: "♜";
+    }
+
+    i.bishop:after {
+        display: block;
+        content: "♝";
+    }
+
+    i.knight:after {
+        display: block;
+        content: "♞";
+    }
+
+    i.pawn:after {
+        display: block;
+        content: "♟";
+    }
+}
