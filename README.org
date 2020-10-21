@@ -23,6 +23,7 @@ You can try it here: http://ldlework.com/chess/
 - +join network game+
 - +backend websocket server+
 - +highlight valid moves+
+- +settings menu+
 - player color assignment
 - turn enforcement
 - connectivity indicator
