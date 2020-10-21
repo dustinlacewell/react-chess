@@ -28,9 +28,9 @@ export default function Board() {
     return (
         <DndProvider backend={HTML5Backend}>
             <div id={css.board}>
-                <Score name={firstTurn} info={firstPlayer} />
+                <Score key={1} name={firstTurn} info={firstPlayer} />
                 <div id={css.squares}>{squares}</div>
-                <Score name={secondTurn} info={secondPlayer} />
+                <Score key={2} name={secondTurn} info={secondPlayer} />
             </div>
             <PiecePreview />
         </DndProvider>
