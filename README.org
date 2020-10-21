@@ -6,20 +6,26 @@ You can try it here: http://ldlework.com/chess/
 
 [[./screenshot.png]]
 
-* Implemented Features
-
-- movable pieces
-- valid moves highlighted
-- move validity enforced
-- capture
-- restore pieces from capture
-- hostable and joinable network games
-- backend websocket server
-
-* Unimplemented Features
-- castling
-- en passant
-- checkmate enforcement
-- "queening"
+* Chess Features
+- +movable pieces+
+- +move validity enforced+
+- +capturing+
+- +put pieces back on the board+
+- [[https://en.wikipedia.org/wiki/Castling][castling]]
+- [[https://en.wikipedia.org/wiki/En_passant][en passant]]
+- [[https://en.wikipedia.org/wiki/Checkmate][checkmate]]
+- [[https://en.wikipedia.org/wiki/Promotion_(chess)][promotion]]
 - resigning
-- turn  / player color assignment
+
+* App Features
+- +local play+
+- +host network game+
+- +join network game+
+- +backend websocket server+
+- +highlight valid moves+
+- player color assignment
+- turn enforcement
+- connectivity indicator
+- board history
+- request / confirm undo
+
