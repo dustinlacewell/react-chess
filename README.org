@@ -1,0 +1,24 @@
+#+title: Chess
+
+This is a chessboard made with [[https://reactjs.org/][ReactJS]] with local and network play.
+
+You can try it here: http://ldlework.com/chess/
+
+
+* Implemented Features
+
+- movable pieces
+- valid moves highlighted
+- move validity enforced
+- capture
+- restore pieces from capture
+- hostable and joinable network games
+- backend websocket server
+
+* Unimplemented Features
+- castling
+- en passant
+- checkmate enforcement
+- "queening"
+- resigning
+- turn  / player color assignment
