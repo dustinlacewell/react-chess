@@ -4,6 +4,7 @@ This is a chessboard made with [[https://reactjs.org/][ReactJS]] with local and 
 
 You can try it here: http://ldlework.com/chess/
 
+[[./screenshot.png]]
 
 * Implemented Features
 
